@@ -20,8 +20,8 @@ html {
 }
 
 .rounded-b-custom {
-    border-bottom-left-radius: 120px;
-    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
 }
 
 .nav-link {
