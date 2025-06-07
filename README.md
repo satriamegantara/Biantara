@@ -4,7 +4,11 @@ Welcome to the official repository for **Biantara UAV Unsoed**!
 This project is a showcase website for the Biantara UAV team from Universitas Jenderal Soedirman, highlighting our journey, divisions, and achievements in UAV (Unmanned Aerial Vehicle) technology and competitions.
 
 ## 🧾 Changelog
+<<<<<<< HEAD
 ### Biantara V.A2 - 07-06-2025
+=======
+### Biantara V.A02 - 07-06-2025
+>>>>>>> 360a6b5f1c2d04181cc216b7855876e044cf7ed5
 
 #### Added
 - Adding loading page
@@ -21,6 +25,7 @@ This project is a showcase website for the Biantara UAV team from Universitas Je
 - Removing "Learn More About Us" button
 - Removing the gallery section in the header
 
+<<<<<<< HEAD
 ### Biantara V.A2.1 - 07-06-2025
 
 #### Added
@@ -32,6 +37,8 @@ This project is a showcase website for the Biantara UAV team from Universitas Je
 
 ### Removed
 
+=======
+>>>>>>> 360a6b5f1c2d04181cc216b7855876e044cf7ed5
 ## 🛠️ Built With
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
