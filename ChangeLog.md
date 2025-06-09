@@ -10,8 +10,6 @@
 ### Changed
 - Changed some contents
 
-## Fixed
-
 ## Removed
 - Removed "Learn More About Us" button
 - Removed the gallery section in the header
@@ -22,8 +20,6 @@
 - Added Vercel Web Analytics script 
 
 ### Changed
-
-### Fixed
 
 ### Removed
 
@@ -40,6 +36,13 @@
 - Changed description for "Our Division" section
 - Slight change on timeline section
 
-### Fixed
+### Removed
+
+## Biantara V.A3.1 - 09-06-2025
+
+### Added
+- Added racing-plane.html
+
+### Changed
 
 ### Removed

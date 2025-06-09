@@ -7,7 +7,7 @@ This project is a showcase website for the Biantara UAV team from Universitas Je
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) (Upcoming update)
+- [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)
 - [Font Awesome](https://fontawesome.com/)
 
 ## 🤝 Contributing
