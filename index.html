@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="styles.css" rel="stylesheet">
-    <title>Biantara UAV Unsoed</title>
+    <title>Home | Biantara UAV Unsoed</title>
 </head>
 <body id="home" class="font-poppins antialiased text-gray-800">
     <div id="loading-screen" class="loading-screen">
@@ -33,9 +34,19 @@
                         <h1 class="text-2xl font-bold"><a href="index.html">Biantara</a></h1>
                     </div>
                     
-                    <nav class="hidden md:flex space-x-6">
-                        <a href="error.html" class="nav-link text-lg">About Us</a>
-                        <a href="error.html" class="nav-link text-lg">Division</a>
+                    <nav class="hidden md:flex space-x-6 items-center">
+                        <a href="error.html" class="text-lg hover:text-black">About Us</a>
+                        <div class="relative group">
+                            <button class="text-lg flex items-center focus:outline-none hover:text-black">
+                                Division
+                                <i class="fas fa-chevron-down ml-3 text-sm transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-44 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 invisible group-hover:visible group-focus-within:visible">
+                                <a href="error.html" class="block px-4 py-2 hover:bg-red-100 flex items-center gap-2"><img src="images/1.png" class="w-5 h-5">Racing Plane</a>
+                                <a href="error.html" class="block px-4 py-2 hover:bg-red-100 flex items-center gap-2"><img src="images/2.png" class="w-5 h-5">Fixed Wing</a>
+                                <a href="error.html" class="block px-4 py-2 hover:bg-red-100 flex items-center gap-2"><img src="images/3.png" class="w-5 h-5">Manager</a>
+                            </div>
+                        </div>
                     </nav>
                     
                     <button id="mobile-menu-btn" class="md:hidden text-white hover:text-red-200 focus:outline-none">
@@ -45,8 +56,18 @@
                 
                 <nav id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-red-400 hidden">
                     <div class="flex flex-col space-y-2 pt-4">
-                        <a href="error.html" class="nav-link text-lg py-2">About Us</a>
-                        <a href="error.html" class="nav-link text-lg py-2">Division</a>
+                        <a href="error.html" class="text-lg py-2">About Us</a>
+                        <div>
+                            <button class="text-lg py-2 flex items-center w-full justify-between focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                                Division
+                                <i class="fas fa-chevron-down ml-1 text-sm transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="hidden flex flex-col ml-4">
+                                <a href="error.html" class="py-2">Racing Plane</a>
+                                <a href="error.html" class="py-2">Fixed Wing</a>
+                                <a href="error.html" class="py-2">Manager</a>
+                            </div>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -71,7 +92,13 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                     <div>
-                        <h3 class="text-3xl md:text-5xl font-bold mb-8 text-gray-800">What Drives Us</h3>
+                        <div class="relative inline-block mx-auto text-center mb-10">
+                            <img src="images/line3.webp" class="absolute -translate-x-1/2 -top-3 md:-top-6 w-44 md:w-72 h-auto -z-10 pointer-events-none select-none" loading="lazy">
+                            <div class="flex items-center justify-center relative z-10">
+                                <h3 class="text-3xl md:text-5xl font-bold text-gray-800">What Drives Us</h3>
+                                <img src="images/line2.webp" class="ml-4 w-8 md:w-12 h-auto pointer-events-none select-none" loading="lazy">
+                            </div>
+                        </div>
                         <div class="space-y-6">
                             <p class="text-lg md:text-xl leading-relaxed text-gray-700">
                                 Biantara was established to participate in the Indonesian Flying Robot Contest (KRTI). We are a team of students from Universitas Jenderal Soedirman who share a strong passion for unmanned aerial technology and autonomous systems.
@@ -98,7 +125,7 @@
                     </div>
                     
                     <div class="flex justify-center lg:justify-end">
-                        <img src="images/showcase.webp" alt="Tim Biantara" class="w-full max-w-lg rounded-lg object-cover lg:ml-auto" loading="lazy">
+                        <img src="images/showcase.webp" alt="Tim Biantara" class="w-80 md:w-96 max-w-lg rounded-lg object-cover lg:ml-auto" loading="lazy" data-aos="fade-left" data-aos-duration="800">
                     </div>
                 </div>
             </div>
@@ -106,16 +133,19 @@
 
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
-                <h3 class="text-3xl md:text-4xl font-bold text-center mb-2 text-gray-800">Our Divisions</h3>
-                <h4 class="text-xl font-normal text-center mb-12 text-gray-800">Uncover who work behind the scenes</h4>
+                <div class="flex flex-col items-center justify-center mb-2">
+                    <h3 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Our Divisions</h3>
+                    <img src="images/line.webp" alt="Line" class="w-48 md:w-72 h-auto -mt-2" loading="lazy">
+                </div>
+                <h4 class="text-xl font-normal text-center mb-12 text-gray-800">We are organized into two key divisions:</h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center" data-aos="fade-right" data-aos-duration="800">
                         <img src="images/rp.webp" alt="Racing Plane Division" class="w-48 h-48 mx-auto rounded-full mb-4 object-cover border-4 border-red-100 transition-colors duration-300" loading="lazy">
                         <p class="mt-2 text-2xl font-semibold text-red-700 duration-300">
                             Racing Plane Division
                         </p>
                     </div>
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center" data-aos="fade-left" data-aos-duration="800">
                         <img src="images/fw.webp" alt="Fixed Wing Division" class="w-48 h-48 mx-auto rounded-full mb-4 object-cover border-4 border-red-100 transition-colors duration-300" loading="lazy">
                         <p class="mt-2 text-2xl font-semibold text-red-700 duration-300">
                             Fixed Wing Division
@@ -125,50 +155,88 @@
             </div>
         </section>
 
-        <section class="section-bg py-16">
-            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Journey</h3>
+        <section class="py-16" style="background: #ba0f0f;">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Journey</h3>
+                    <p class="text-xl text-red-100 max-w-2xl mx-auto">
+                        From humble beginnings to remarkable achievements in UAV technology
+                    </p>
+                </div>
 
-            <div class="timeline-horizontal-section">
-                <div class="absolute left-0 right-0 top-80 h-2 bg-red-400 z-0"></div>
-                <div class="timeline-horizontal-track flex flex-row space-x-4 sm:space-x-8 relative z-10 pb-8">
-                    <div class="flex flex-col items-center flex-shrink-0 w-72 sm:w-80 md:w-96">
-                        <div class="relative z-10">
-                            <img src="images/biantara.webp" alt="Team Establishment" class="rounded-xl shadow-lg w-full h-72 object-cover border-4 border-red-400" loading="lazy">
-                            <span class="absolute top-4 right-4 bg-red-400 text-gray-900 font-bold px-4 py-1 rounded-lg shadow text-lg">2022</span>
+                <div class="relative">
+                    <div class="absolute top-1/2 left-0 right-0 h-1 bg-red-300 transform -translate-y-1/2 hidden lg:block"></div>
+
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center space-y-12 lg:space-y-0 lg:space-x-8">
+                        <div class="flex-1 group">
+                            <div class="relative">
+                                <div class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 lg:mb-16">
+                                    <div class="relative overflow-hidden rounded-xl mb-4">
+                                        <img src="images/biantara.webp" alt="Team Establishment" class="w-full h-48 object-cover">
+                                        <div class="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-full text-sm">
+                                            2022
+                                        </div>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">Foundation</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Team officially established for UAV research and KRTI preparation with passionate students
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-8"></div>
-                        <div class="bg-red-400 text-white rounded-lg px-6 py-6 text-center shadow text-lg w-full mt-8">
-                            Team officially established for UAV research and KRTI preparation
+
+                        <div class="flex-1 group">
+                            <div class="relative">
+                                <div class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 lg:mt-16">
+                                    <div class="relative overflow-hidden rounded-xl mb-4">
+                                        <img src="images/2023.webp" alt="Debut in KRTI" class="w-full h-48 object-cover">
+                                        <div class="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-full text-sm">
+                                            2023
+                                        </div>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">First Competition</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Debut in KRTI with outstanding performance, achieving 3rd place in our first competition
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col items-center flex-shrink-0 w-72 sm:w-80 md:w-96">
-                        <div class="relative z-10">
-                            <img src="images/2023.webp" alt="Debut in KRTI" class="rounded-xl shadow-lg w-full h-72 object-cover border-4 border-red-400" loading="lazy">
-                            <span class="absolute top-4 right-4 bg-red-400 text-gray-900 font-bold px-4 py-1 rounded-lg shadow text-lg">2023</span>
+
+                        <div class="flex-1 group">
+                            <div class="relative">
+                                <div class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 lg:mb-16">
+                                    <div class="relative overflow-hidden rounded-xl mb-4">
+                                        <img src="images/2024.jpg" alt="Challenging Competition" class="w-full h-48 object-cover">
+                                        <div class="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-full text-sm">
+                                            2024
+                                        </div>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">Technical Growth</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Reached KRTI semifinals with significant technical progress and innovation breakthroughs
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-8"></div>
-                        <div class="bg-red-400 text-white rounded-lg px-6 py-6 text-center shadow text-lg w-full mt-8">
-                            Debut in KRTI, 3rd place in first competition
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center flex-shrink-0 w-72 sm:w-80 md:w-96">
-                        <div class="relative z-10">
-                            <img src="images/2024.jpg" alt="Challenging Competition" class="rounded-xl shadow-lg w-full h-72 object-cover border-4 border-red-400" loading="lazy">
-                            <span class="absolute top-4 right-4 bg-red-400 text-gray-900 font-bold px-4 py-1 rounded-lg shadow text-lg">2024</span>
-                        </div>
-                        <div class="mt-8"></div>
-                        <div class="bg-red-400 text-white rounded-lg px-6 py-6 text-center shadow text-lg w-full mt-8">
-                            Semifinal KRTI, significant technical progress
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center flex-shrink-0 w-72 sm:w-80 md:w-96">
-                        <div class="relative z-10">
-                            <img src="images/2025.webp" alt="Looking Ahead" class="rounded-xl shadow-lg w-full h-72 object-cover border-4 border-red-400" loading="lazy">
-                            <span class="absolute top-4 right-4 bg-red-400 text-gray-900 font-bold px-4 py-1 rounded-lg shadow text-lg">2025</span>
-                        </div>
-                        <div class="mt-8"></div>
-                        <div class="bg-red-400 text-white rounded-lg px-6 py-6 text-center shadow text-lg w-full mt-8">
-                            Ready for new challenges and greater achievements
+
+                        <div class="flex-1 group">
+                            <div class="relative">
+                                <div class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 lg:mt-16">
+                                    <div class="relative overflow-hidden rounded-xl mb-4">
+                                        <img src="images/2025.webp" alt="Looking Ahead" class="w-full h-48 object-cover">
+                                        <div class="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-full text-sm">
+                                            2025
+                                        </div>
+                                        <div class="absolute top-4 left-4 bg-yellow-400 text-gray-800 font-bold px-2 py-1 rounded-full text-xs">
+                                            CURRENT
+                                        </div>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">Future Vision</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Ready for new challenges and greater achievements in UAV technology and competitions
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,19 +245,19 @@
 
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
-                <h3 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">Gallery</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    <div>
-                        <img src="images/gallery1.jpg" alt="Gallery 3" class="w-full h-64 object-cover rounded-lg shadow-md mb-2" loading="lazy">
-                        <p class="text-center text-gray-600">Maiden Flight of PLR-001</p>
+                <div class="flex flex-col items-center justify-center mb-2">
+                    <h3 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Gallery</h3>
+                    <img src="images/line5.png" alt="Line" class="w-32 md:w-44 h-auto -mt-12 md:-mt-16" loading="lazy">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+                    <div class="px-4 flex justify-center">
+                        <img src="images/gallery1.webp" alt="Gallery 1" class="w-[1000px] max-w-full h-auto object-cover shadow-md mb-2 rounded-lg" loading="lazy" data-aos="fade-right" data-aos-duration="800">
                     </div>
-                    <div>
-                        <img src="images/gallery2.webp" alt="Gallery 1" class="w-full h-64 object-cover rounded-lg shadow-md mb-2" loading="lazy">
-                        <p class="text-center text-gray-600">Pelantikan Pengurus SRT</p>
+                    <div class="px-4 flex justify-center">
+                        <img src="images/gallery2.webp" alt="Gallery 2" class="w-[1000px] max-w-full h-auto object-cover shadow-md mb-2 rounded-lg" loading="lazy" data-aos="fade-right" data-aos-duration="800">
                     </div>
-                    <div>
-                        <img src="images/gallery3.jpg" alt="Gallery 2" class="w-full h-64 object-cover rounded-lg shadow-md mb-2" loading="lazy">
-                        <p class="text-center text-gray-600">Biantara's Official Visit to the Bengawan UV Team</p>
+                    <div class="px-4 justify-center">
+                        <img src="images/gallery3.webp" alt="Gallery 3" class="w-[1000px] max-w-full h-auto object-cover shadow-md mb-2 rounded-lg" loading="lazy" data-aos="fade-right" data-aos-duration="800">
                     </div>
                 </div>
             </div>
@@ -221,7 +289,7 @@
                                 <li>Mechanic Subdivision</li>
                                 <li>Electronics Subdivision</li>
                                 <li>System Subdivision</li>
-                                <li>Non-Technical Subdivision</li>
+                                <li>Manager Subdivision</li>
                             </ul>
                         </div>
                     </div>
@@ -239,7 +307,7 @@
                             <li><strong>Mechanic Subdivision</strong> focuses on the design, manufacture, and maintenance of UAV structures and airframes.</li>
                             <li><strong>Electronics Subdivision</strong> is responsible for integrating sensors, power systems, wire, and electronic components.</li>
                             <li><strong>System Subdivision</strong> handles software development, flight control systems, and autonomous navigation.</li>
-                            <li><strong>Non-Technical Subdivision</strong> manages administrative tasks, public relations, and funding.</li>
+                            <li><strong>Manager Subdivision</strong> manages administrative tasks, public relations, and funding.</li>
                             </ul>
                         </div>
                     </div>
@@ -279,15 +347,21 @@
                         <i class="fab fa-linkedin text-3xl"></i>
                     </a>
                 </div>
-                <div class="border-t border-blue-700 pt-6">
-                    <p class="text-sm">© 2025 Tim Biantara KRTI. All rights reserved.</p>
-                </div>
             </div>
         </footer>
     </div>
 
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script>
+    AOS.init({
+        duration: 600,
+        easing: 'ease-in-out',
+        once: false,
+        offset: 100
+    });
+
     document.addEventListener('DOMContentLoaded', function() {
         const loadingScreen = document.getElementById('loading-screen');
         const mainContent = document.getElementById('main-content');
@@ -340,31 +414,68 @@
             } else {
                 menuIcon.className = 'fas fa-times text-xl';
             }
-        });
 
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = 'fas fa-bars text-xl';
-            });
-        });
-        
-        document.querySelectorAll('.faq-toggle').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('i');
-                const isOpen = !content.classList.contains('hidden');
-
-                if (!isOpen) {
-                    content.classList.remove('hidden');
-                    if (icon) icon.classList.add('rotate-180');
-                } else {
-                    content.classList.add('hidden');
-                    if (icon) icon.classList.remove('rotate-180');
-                }
-            });
+            if (mobileChevron) {
+                mobileChevron.classList.remove('rotate-180');
+            }
         });
     });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            menuIcon.className = 'fas fa-bars text-xl';
+        });
+    });
+        
+    document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            const isOpen = !content.classList.contains('hidden');
+
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                if (icon) icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                if (icon) icon.classList.remove('rotate-180');
+            }
+        });
+    });
+
+    const mobileDivisionBtn = document.querySelector('#mobile-menu button.flex');
+    if (mobileDivisionBtn) {
+        const mobileChevron = mobileDivisionBtn.querySelector('i');
+        mobileDivisionBtn.addEventListener('click', function () {
+            if (mobileChevron) mobileChevron.classList.toggle('rotate-180');
+        });
+    }
+
+    const divisionBtn = document.querySelector('nav.md\\:flex .group > button');
+    const divisionDropdown = document.querySelector('nav.md\\:flex .group > div');
+    if (divisionBtn && divisionDropdown) {
+        divisionBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            divisionDropdown.classList.toggle('opacity-0');
+            divisionDropdown.classList.toggle('invisible');
+            divisionDropdown.classList.toggle('opacity-100');
+            divisionDropdown.classList.toggle('visible');
+
+            const chevron = divisionBtn.querySelector('i');
+            if (chevron) chevron.classList.toggle('rotate-180');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!divisionBtn.contains(e.target) && !divisionDropdown.contains(e.target)) {
+                divisionDropdown.classList.add('opacity-0', 'invisible');
+                divisionDropdown.classList.remove('opacity-100', 'visible');
+
+                const chevron = divisionBtn.querySelector('i');
+                if (chevron) chevron.classList.remove('rotate-180');
+            }
+        });
+    }
     </script>
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

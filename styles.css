@@ -15,34 +15,14 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .header-bg,
 .footer-bg {
     background: linear-gradient(135deg, #ba0f0f 0%, #e73c3c 100%);
-}
-
-.nav-link {
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #fecaca;
-    transform: translateY(-2px);
-}
-
-.nav-link.active {
-    color: #fecaca;
-}
-
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #fecaca;
-    border-radius: 1px;
 }
 
 .section-bg {
@@ -60,6 +40,14 @@ html {
 
 .hover\:scale-110:hover {
     transform: scale(1.1);
+}
+
+.hover\:-translate-y-2:hover {
+    transform: translateY(-0.5rem);
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .group:hover .group-hover\:border-red-300 {
@@ -251,4 +239,22 @@ html {
     .timeline-horizontal-track > div {
         width: 85vw;
     }
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+@media (max-width: 1024px) {
+    .lg\:mb-16 {
+        margin-bottom: 0 !important;
+    }
+    
+    .lg\:mt-16 {
+        margin-top: 0 !important;
+    }
+}
+
+.transition-all {
+    transition: all 0.3s ease;
 }
