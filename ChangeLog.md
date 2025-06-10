@@ -46,3 +46,17 @@
 ### Changed
 
 ### Removed
+
+## Biantara V.A4.1 - 09-06-2025
+
+### Added
+- Added more information at footer
+- Added AOS in image in racing-plane.html
+- Added fixed-wing.html (still beta)
+
+### Changed
+- Changed the member section in racing-plane.html
+- Changed error.html
+- Changed directory for every images
+
+### Removed

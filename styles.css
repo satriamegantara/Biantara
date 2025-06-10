@@ -182,6 +182,20 @@ html, body {
     border-color: #1d4ed8;
 }
 
+@media (max-width: 480px) {
+    .error-code {
+        font-size: 4rem;
+    }
+    
+    .error-message {
+        font-size: 1.2rem;
+    }
+    
+    .aircraft-left, .aircraft-right {
+        width: 150px;
+    }
+}
+
 @media (max-width: 768px) {
     .loading-container {
         width: 90%;
@@ -225,6 +239,28 @@ html, body {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .error-code {
+        font-size: 5rem;
+    }
+    
+    .error-message {
+        font-size: 1.5rem;
+    }
+    
+    .aircraft-left, .aircraft-right {
+        width: 200px;
+    }
+    
+    .aircraft-left {
+        left: -30px;
+        bottom: 50px;
+    }
+    
+    .aircraft-right {
+        right: -30px;
+        top: 50px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -264,4 +300,90 @@ html, body {
 
 .transition-all {
     transition: all 0.3s ease;
+}
+
+.content {
+    text-align: center;
+    z-index: 1;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    color: white;
+    position: relative;
+}
+
+.error-code::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.error-message {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.home-button {
+    background-color: #9b0000;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+    background-color: #7a0000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.aircraft {
+    position: absolute;
+    z-index: 1;
+}
+
+.aircraft-left {
+    left: -50px;
+    bottom: 100px;
+    width: 300px;
+    transform: rotate(15deg);
+    animation: floatLeft 8s ease-in-out infinite;
+}
+
+.aircraft-right {
+    right: -50px;
+    top: 100px;
+    width: 300px;
+    transform: rotate(-15deg) scaleX(-1);
+    animation: floatRight 10s ease-in-out infinite;
+}
+
+@keyframes floatLeft {
+    0%, 100% { transform: rotate(15deg) translateY(0); }
+    50% { transform: rotate(15deg) translateY(-20px); }
+}
+
+@keyframes floatRight {
+    0%, 100% { transform: rotate(-15deg) scaleX(-1) translateY(0); }
+    50% { transform: rotate(-15deg) scaleX(-1) translateY(-20px); }
 }

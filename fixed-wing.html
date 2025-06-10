@@ -3,25 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/biantara.ico" type="image/png">
+    <meta name="description" content="Fixed Wing Division - Biantara UAV Unsoed">
+    <link rel="icon" href="images/logo/biantara.ico" type="image/webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="styles.css" rel="stylesheet">
-    <title>Fixed Wing | Biantara UAV Unsoed</title>
+    <title>Fixed Wing Division | Biantara UAV Unsoed</title>
 </head>
 <body class="bg-gray-100 font-poppins">
     <div id="loading-screen" class="loading-screen">
         <div class="loading-container">
             <div class="loading-logo">
-                <img src="images/biantara.ico" alt="Biantara Logo" class="logo-shake w-48 h-48">
+                <img src="images/logo/biantara.ico" alt="Biantara Logo" class="logo-shake w-48 h-48">
             </div>
-            
             <div class="loading-bar">
                 <div class="loading-bar-fill" id="loading-bar-fill"></div>
             </div>
         </div>
     </div>
+
+    <div id="main-content" class="main-content">
+        <header class="header-bg text-white shadow-lg fixed top-0 w-full z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between py-3">
+                    <div class="flex items-center space-x-4">
+                        <a href="index.html"><img src="images/logo/biantara.ico" alt="Logo Biantara" class="w-12 h-12"></a>
+                        <h1 class="text-2xl font-bold"><a href="index.html">Biantara</a></h1>
+                    </div>
+                    
+                    <nav class="hidden md:flex space-x-6 items-center">
+                        <a href="error.html" class="text-lg hover:text-black">About Us</a>
+                        <div class="relative group">
+                            <button class="text-lg flex items-center focus:outline-none hover:text-black">
+                                Division
+                                <i class="fas fa-chevron-down ml-3 text-sm transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-44 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 invisible group-hover:visible group-focus-within:visible">
+                                <a href="racing-plane.html" class="block px-4 py-2 hover:bg-red-100 flex items-center gap-2"><img src="images/elements/1.png" class="w-5 h-5">Racing Plane</a>
+                                <a href="fixed-wing.html" class="block px-4 py-2 hover:bg-red-100 flex items-center gap-2"><img src="images/elements/2.png" class="w-5 h-5">Fixed Wing</a>
+                                <a href="error.html" class="block px-4 py-2 hover:bg-red-100 flex items-center gap-2"><img src="images/elements/3.png" class="w-5 h-5">Manager</a>
+                            </div>
+                        </div>
+                    </nav>
+                    
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:text-red-200 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+                <nav id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-red-400 hidden">
+                    <div class="flex flex-col space-y-2 pt-4">
+                        <a href="error.html" class="text-lg py-2">About Us</a>
+                        <div>
+                            <button class="text-lg py-2 flex items-center w-full justify-between focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                                Division
+                                <i class="fas fa-chevron-down ml-1 text-sm transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="hidden flex flex-col ml-4">
+                                <a href="racing-plane.html" class="py-2">Racing Plane</a>
+                                <a href="fixed-wing.html" class="py-2">Fixed Wing</a>
+                                <a href="error.html" class="py-2">Manager</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+            <div class="absolute inset-0">
+                <img src="images/bg/background.png" alt="Background" draggable="false" class="w-full h-full object-cover select-none pointer-events-none">
+            </div>
+            <div class="container mx-auto px-4 relative z-10 text-center text-white">
+                <h1 class="font-anton text-5xl md:text-7xl font-bold mt-9 leading-tight" style="letter-spacing:0.50em">FIXED WING</h1>
+                <img src="images/resources/fw-plane.webp" alt="FW Plane" class="h-auto mx-auto -mt-44" style="width:850px" loading="eager">
+                <h2 class="font-bebas md:text-6xl font-bold -mt-12" style="letter-spacing:0.25em" >JAEGER</h2>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">Precision in every drop, clarity in every map.</p>
+            </div>
+        </section>
+
+        <section id="fleet" class="py-16 bg-gray-50">   
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Brief Overview</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Take a closer look at our Fixed Wing, the Jaeger, designed for accuration and precision in mapping and dropping competitions.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <img src="images/resources/fw-plane.webp" class="w-full" data-aos="fade-right" data-aos-duration="800">
+                    </div>
+
+                    <div class="bg-red rounded-xl p-6 shadow-lg" data-aos="fade-left" data-aos-duration="800">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-info-circle text-red-600 mr-3"></i>
+                            General Specifications
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-sm text-gray-600">Length</div>
+                                <div class="text-lg font-semibold">110 cm</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-600">Wingspan</div>
+                                <div class="text-lg font-semibold">135 cm</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-600">Weight</div>
+                                <div class="text-lg font-semibold">2.9 kg</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-600">Material</div>
+                                <div class="text-lg font-semibold">Hardfoam</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet Our Team</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        The talented individuals behind our fixed wing innovations
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/fixed-wing/kadiv.JPG" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">M. Nur Bijak</h3>
+                            <p class="text-red-600 text-xl font-semibold">Division Leader</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/racing-plane/mech-lead.JPG" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Ihya Ulumudin</h3>
+                            <p class="text-red-600 text-xl font-semibold">Mechanical Lead</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/racing-plane/mech1.JPG" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Satria Megantara</h3>
+                            <p class="text-red-600 text-xl font-semibold">Mechanical Staff</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/racing-plane/mech2.jpg" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Danendra A. Miko</h3>
+                            <p class="text-red-600 text-xl font-semibold">Mechanical Staff</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/racing-plane/" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Adyuta N. Rakha</h3>
+                            <p class="text-red-600 text-xl font-semibold">Pilot</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/racing-plane/" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Kevin Jonathan</h3>
+                            <p class="text-red-600 text-xl font-semibold">Electronic Lead</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/racing-plane/" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Daud Angrah</h3>
+                            <p class="text-red-600 text-xl font-semibold">Electronic Staff</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                            <img src="images/member/racing-plane/electronic2.JPG" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-2xl font-bold text-gray-800">Shidqi Abiyyu</h3>
+                            <p class="text-red-600 text-xl font-semibold">Electronic Staff</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-bg text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="mb-6">
+                            <img src="images/logo/biantara.webp" alt="Biantara Logo" class="w-32 h-32 object-contain" loading="lazy">
+                        </div>
+                        
+                        <div class="flex space-x-1 mr-3">
+                            <a href="https://www.instagram.com/biantara_uav/" target="_blank" class="w-10 h-10 flex items-center justify-center hover:bg-white">
+                                <img src="images/icon/instagram.svg" alt="Instagram" class="w-6 h-6">
+                            </a>
+                            <a href="error.html" target="_blank" class="w-10 h-10 flex items-center justify-center hover:bg-white">
+                                <img src="images/icon/youtube.svg" alt="YouTube" class="w-6 h-6">
+                            </a>
+                            <a href="error.html" target="_blank" class="w-10 h-10 flex items-center justify-center hover:bg-white">
+                                <img src="images/icon/tiktok.svg" alt="Tiktok" class="w-6 h-6">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-bold mb-4">Our Division</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-center md:justify-start">
+                                <i class="fas fa-chevron-right text-sm mr-3"></i>
+                                <a href="racing-plane.html" class="hover:text-red-200 transition-colors duration-300">Racing Plane</a>
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start">
+                                <i class="fas fa-chevron-right text-sm mr-3"></i>
+                                <a href="fixed-wing.html" class="hover:text-red-200 transition-colors duration-300">Fixed Wing</a>
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start">
+                                <i class="fas fa-chevron-right text-sm mr-3"></i>
+                                <a href="error.html" class="hover:text-red-200 transition-colors duration-300">Manager</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-bold mb-4">Contact</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <i class="fas fa-phone text-sm mr-3"></i>
+                                <a href="tel:+6285161000940" class="hover:text-red-200 transition-colors duration-300">
+                                    +62 851-6100-0940
+                                </a>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start">
+                                <i class="fas fa-envelope text-sm mr-3"></i>
+                                <a href="mailto:biantara@unsoed.ac.id" class="hover:text-red-200 transition-colors duration-300">
+                                    biantara@unsoed.ac.id
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-bold mb-4">Address</h3>
+                        <div class="flex items-start justify-center md:justify-start">
+                            <i class="fas fa-map-marker-alt text-sm mr-3 mt-1"></i>
+                            <address class="not-italic leading-relaxed">
+                                Jl. Raya Mayjen Sungkono,<br>
+                                Kalimanah, Kabupaten<br>
+                                Purbalingga, Jawa Tengah<br>
+                                53371
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            offset: 200
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const mainContent = document.getElementById('main-content');
+            const loadingBarFill = document.getElementById('loading-bar-fill');
+            
+            document.body.style.overflow = 'hidden';
+            
+            let progress = 0;
+            const loadingDuration = 1500;
+            const updateInterval = 30;
+            const increment = (100 / (loadingDuration / updateInterval));
+            
+            const progressInterval = setInterval(() => {
+                progress += increment;
+                
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(progressInterval);
+                    
+                    setTimeout(() => {
+                        hideLoadingScreen();
+                    }, 200);
+                }
+                
+                loadingBarFill.style.width = progress + '%';
+            }, updateInterval);
+            
+            function hideLoadingScreen() {
+                loadingScreen.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    mainContent.classList.add('show');
+                    
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }, 500);
+                }, 200);
+            }
+            
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuBtn.querySelector('i');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.className = 'fas fa-bars text-xl';
+                } else {
+                    menuIcon.className = 'fas fa-times text-xl';
+                }
+
+                if (mobileChevron) {
+                    mobileChevron.classList.remove('rotate-180');
+                }
+            });
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fas fa-bars text-xl';
+            });
+        });
+
+        function toggleMobileDropdown(button) {
+            const dropdown = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            dropdown.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
     
+        const mobileDivisionBtn = document.querySelector('#mobile-menu button.flex');
+        if (mobileDivisionBtn) {
+            const mobileChevron = mobileDivisionBtn.querySelector('i');
+            mobileDivisionBtn.addEventListener('click', function () {
+                if (mobileChevron) mobileChevron.classList.toggle('rotate-180');
+            });
+        }
+
+        document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const isOpen = !content.classList.contains('hidden');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    if (icon) icon.classList.add('rotate-180');
+                } else {
+                    content.classList.add('hidden');
+                    if (icon) icon.classList.remove('rotate-180');
+                }
+            });
+        });
+
+        const divisionBtn = document.querySelector('nav.md\\:flex .group > button');
+        const divisionDropdown = document.querySelector('nav.md\\:flex .group > div');
+        if (divisionBtn && divisionDropdown) {
+            divisionBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                divisionDropdown.classList.toggle('opacity-0');
+                divisionDropdown.classList.toggle('invisible');
+                divisionDropdown.classList.toggle('opacity-100');
+                divisionDropdown.classList.toggle('visible');
+
+                const chevron = divisionBtn.querySelector('i');
+                if (chevron) chevron.classList.toggle('rotate-180');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!divisionBtn.contains(e.target) && !divisionDropdown.contains(e.target)) {
+                    divisionDropdown.classList.add('opacity-0', 'invisible');
+                    divisionDropdown.classList.remove('opacity-100', 'visible');
+
+                    const chevron = divisionBtn.querySelector('i');
+                    if (chevron) chevron.classList.remove('rotate-180');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
